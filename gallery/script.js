@@ -2,7 +2,7 @@ const USER="asamiii8";
 const REPO="RPG_ress";
 const ROOT="ress/icons";
  
-const gallery=document.getElementById("galerie");
+const gallery=document.getElementById("gallery");
 const back=document.getElementById("back");
 
 let currentPath=ROOT;
