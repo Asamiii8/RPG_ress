@@ -1,6 +1,6 @@
 const USER="asamiii8";
 const REPO="RPG_ress";
-const ROOT="ress/icons";
+const ROOT="ress";
  
 const gallery=document.getElementById("gallery");
 const back=document.getElementById("back");
