@@ -19,7 +19,7 @@ function showFolders(folders){
     folders.forEach(folder=>{
         const card=document.createElement("div");
         card.className="folder";
-        card.innerHTML=`📁<div class="name">${folder.name}</div>`;
+        card.innerHTML=` <img class="folder-icon" src="./png/folder.png" alt="folder"><div class="name">${folder.name}</div>`;
 
         card.onclick=()=>{
             currentPath=folder.path;

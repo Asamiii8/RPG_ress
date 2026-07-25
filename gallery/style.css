@@ -117,3 +117,7 @@ h1 {
 .icon:hover .copy {
     opacity: 1;
 }
+
+.folder-icon {
+    width: 48px;
+}
