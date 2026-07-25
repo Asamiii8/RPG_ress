@@ -22,13 +22,17 @@ async function getFolder(path){
 } 
 
 function showFolders(folders){
-    gallery.innerHTML="";
+
     folders.forEach(folder=>{
         const card=document.createElement("div");
         card.className="folder";
-        card.innerHTML=` <img class="folder-icon" src="./png/folder.png" alt="folder"><div class="name">${folder.name}</div>`;
+        card.innerHTML=`
+		<img class="folder-icon" src="./png/folder.png" alt="folder">
+		<div class="name">${folder.name}</div>
+	`;
 
         card.onclick=()=>{
+            history.push(currentPath);
             currentPath=folder.path;
             loadFolder(currentPath);
         };
@@ -38,7 +42,7 @@ function showFolders(folders){
 }
 
 function showImages(images){
-    
+
     images.forEach(image=>{
         const card=document.createElement("div");
         card.className="icon";
@@ -46,7 +50,7 @@ function showImages(images){
             <img src="${image.download_url}" alt="">
             <button class="copy" title="Copier l'URL">⧉</button>
         `;
-         const button=card.querySelector(".copy");
+        const button=card.querySelector(".copy");
 
         const img = card.querySelector("img");
 
@@ -185,5 +189,5 @@ function updateBreadcrumb(path){
 }
 
 
-// lance  la galerie
+// lance la galerie
 loadFolder(ROOT);
